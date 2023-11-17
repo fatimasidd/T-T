@@ -20,8 +20,8 @@
 		5756AD642B039F0100B1E804 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756AD632B039F0100B1E804 /* NewConversationViewController.swift */; };
 		5756AD662B039F2800B1E804 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756AD652B039F2800B1E804 /* ProfileViewController.swift */; };
 		5756AD692B03B08600B1E804 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756AD682B03B08600B1E804 /* Extensions.swift */; };
-		5756AD6D2B04FB3A00B1E804 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5756AD6C2B04FB3A00B1E804 /* GoogleService-Info.plist */; };
 		5756AD6F2B052ED400B1E804 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756AD6E2B052ED400B1E804 /* DatabaseManager.swift */; };
+		5756AD712B07B29F00B1E804 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5756AD702B07B29F00B1E804 /* GoogleService-Info.plist */; };
 		C0200638DF87D269DFB67F5E /* Pods_T_T.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B12018C7C2CA735C0FEA5E8 /* Pods_T_T.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,8 @@
 		5756AD632B039F0100B1E804 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		5756AD652B039F2800B1E804 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5756AD682B03B08600B1E804 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		5756AD6C2B04FB3A00B1E804 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5756AD6E2B052ED400B1E804 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		5756AD702B07B29F00B1E804 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5BA69DF74940E5B24431BFBF /* Pods-T T.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T T.debug.xcconfig"; path = "Target Support Files/Pods-T T/Pods-T T.debug.xcconfig"; sourceTree = "<group>"; };
 		DA45E32FEAB726A0E5BC3AFA /* Pods-T T.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T T.release.xcconfig"; path = "Target Support Files/Pods-T T/Pods-T T.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +81,7 @@
 		5756AD3F2B039A9E00B1E804 /* T T */ = {
 			isa = PBXGroup;
 			children = (
-				5756AD6C2B04FB3A00B1E804 /* GoogleService-Info.plist */,
+				5756AD702B07B29F00B1E804 /* GoogleService-Info.plist */,
 				5756AD592B039C6E00B1E804 /* Resources */,
 				5756AD582B039C4A00B1E804 /* ViewModels */,
 				5756AD572B039C3C00B1E804 /* Controllers */,
@@ -186,6 +186,7 @@
 				5756AD3A2B039A9E00B1E804 /* Frameworks */,
 				5756AD3B2B039A9E00B1E804 /* Resources */,
 				2A2400B0BB0063FB8FED9371 /* [CP] Embed Pods Frameworks */,
+				2BF52443B421A1EE1C7EEFA1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,7 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5756AD4D2B039AA000B1E804 /* LaunchScreen.storyboard in Resources */,
-				5756AD6D2B04FB3A00B1E804 /* GoogleService-Info.plist in Resources */,
+				5756AD712B07B29F00B1E804 /* GoogleService-Info.plist in Resources */,
 				5756AD4A2B039AA000B1E804 /* Assets.xcassets in Resources */,
 				5756AD482B039A9E00B1E804 /* Main.storyboard in Resources */,
 			);
@@ -259,6 +260,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T T/Pods-T T-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BF52443B421A1EE1C7EEFA1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T T/Pods-T T-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T T/Pods-T T-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T T/Pods-T T-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9EF2633EEE86C8D9DBE11E2D /* [CP] Check Pods Manifest.lock */ = {
@@ -455,6 +473,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "T T/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take a profile picture";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to select a photo for your profile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -483,6 +503,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "T T/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take a profile picture";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to select a photo for your profile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

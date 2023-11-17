@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>526328296297-4eg9iub29spvcs0nbj766esnoebvcdqi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.526328296297-4eg9iub29spvcs0nbj766esnoebvcdqi</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDIgzeccmE8_WXQms4SoTQI51UDYeiHMUI</string>
 	<key>GCM_SENDER_ID</key>
@@ -26,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:526328296297:ios:a0a3b0eb5a66155aa903f8</string>
+	<key>DATABASE_URL</key>
+	<string>https://trusty-talk-ios-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

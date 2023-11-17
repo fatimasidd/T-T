@@ -20,10 +20,9 @@
 #import "FirebaseDatabase/Sources/Core/FRepoManager.h"
 #import "FirebaseDatabase/Sources/FIRDatabaseConfig_Private.h"
 
+#import "FirebaseAppCheck/Interop/FIRAppCheckInterop.h"
 #import "FirebaseAuth/Interop/FIRAuthInterop.h"
 #import "FirebaseCore/Extension/FirebaseCoreInternal.h"
-
-@import FirebaseAppCheckInterop;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -33,7 +32,7 @@ typedef NSMutableDictionary<NSString *, FIRDatabase *> FIRDatabaseDictionary;
 
 @interface FIRDatabaseComponent () <FIRComponentLifecycleMaintainer, FIRLibrary>
 @property(nonatomic) FIRDatabaseDictionary *instances;
-/// Internal initializer.
+/// Internal intializer.
 - (instancetype)initWithApp:(FIRApp *)app;
 @end
 
