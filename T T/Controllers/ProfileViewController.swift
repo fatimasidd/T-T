@@ -44,7 +44,7 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
                 return
             }
             //LogOut google
-            GIDSignIn.sharedInstance()?.signOut()
+            GIDSignIn.sharedInstance.signOut()
             do{
               try  FirebaseAuth.Auth.auth().signOut()
                 let vc = LoginViewController()

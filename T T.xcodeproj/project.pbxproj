@@ -186,7 +186,6 @@
 				5756AD3A2B039A9E00B1E804 /* Frameworks */,
 				5756AD3B2B039A9E00B1E804 /* Resources */,
 				2A2400B0BB0063FB8FED9371 /* [CP] Embed Pods Frameworks */,
-				2BF52443B421A1EE1C7EEFA1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,23 +259,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T T/Pods-T T-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2BF52443B421A1EE1C7EEFA1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-T T/Pods-T T-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-T T/Pods-T T-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T T/Pods-T T-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9EF2633EEE86C8D9DBE11E2D /* [CP] Check Pods Manifest.lock */ = {
