@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/fatimasiddiqui/T-T remote get-url origin)"
+    ]
+  }
+}

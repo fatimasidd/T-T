@@ -1,5 +1,4 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '16.0'
 
 target 'T T' do
  
@@ -11,7 +10,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database' 
 
 # Google signin
-pod 'GoogleSignIn','~>5.0.2'
+pod 'GoogleSignIn', '~> 6.0'
 
 
 

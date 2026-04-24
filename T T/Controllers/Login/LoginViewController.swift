@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 import GoogleSignIn
 class LoginViewController: UIViewController {
 
@@ -80,8 +81,8 @@ class LoginViewController: UIViewController {
                     
         })
         
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        
+        googleLogInButton.addTarget(self, action: #selector(googleSignInTapped), for: .touchUpInside)
+
 title = "Log In"
         
         view.backgroundColor = .white
@@ -150,6 +151,36 @@ title = "Log In"
             strongSelf.navigationController?.dismiss(animated: true,completion:nil)
         })
     }
+    @objc private func googleSignInTapped() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [weak self] user, error in
+            guard error == nil, let user = user else { return }
+            guard let email = user.profile?.email,
+                  let firstName = user.profile?.givenName,
+                  let lastName = user.profile?.familyName else { return }
+
+            DatabaseManager.shared.userExists(with: email) { exists in
+                if !exists {
+                    DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                }
+            }
+
+            let authentication = user.authentication
+            guard let idToken = authentication.idToken else { return }
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                           accessToken: authentication.accessToken)
+            FirebaseAuth.Auth.auth().signIn(with: credential) { authResult, error in
+                guard authResult != nil, error == nil else {
+                    print("Failed to login with Google")
+                    return
+                }
+                print("Successfully signed in with Google credentials")
+                NotificationCenter.default.post(name: .didLogInNotification, object: nil)
+            }
+        }
+    }
+
     func alertUserloginError(){
         let alert = UIAlertController(title: "Woops", message: "Please enter all information to log in", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
@@ -179,3 +210,5 @@ extension LoginViewController:UITextFieldDelegate{
         return true
     }
 }
+//added a comment to ckeck review
+//new comment
