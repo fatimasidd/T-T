@@ -11,8 +11,14 @@ class ConversationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-//        DatabaseManager.shared.test()
+        listenForConversations()
+    }
+
+    private func listenForConversations() {
+        guard let email = FirebaseAuth.Auth.auth().currentUser?.email else { return }
+        DatabaseManager.shared.userExists(with: email) { exists in
+            self.title = exists ? "Chats" : "No Chats"
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
